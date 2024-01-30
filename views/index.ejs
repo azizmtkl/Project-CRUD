@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section class="section_container">
+           <div class="sidebar_container" id="sidebar">
+            
+            <div class="sidebar_header" id="sidebar_container">
+                <div class="btn_close" id="btn_close"> 
+                    <i class="ri-close-circle-line"></i>
+                </div>
+                <div class="logo"><i class="ri-flashlight-fill"></i><span>SideBarApp</span></div>
+            </div>
+            <ul>
+                <li>
+                    <i class="ri-home-8-line"></i><a href="/">Home</a>
+                </li>
+
+                <li>
+                    <i class="ri-user-add-line"></i><a href="/add">Add Customers</a>
+                </li>
+            </ul>
+
+            <div class="profile">
+                <img src="/images/img_avatar.png" alt="">
+                <div class="name">Aziz ELmo</div>
+                <span><i class="ri-arrow-up-s-fill"></i></span>
+            
+        </div>
+           </div>
+           <div class="main" id="main">
+
+            <div class="header_main">
+                <div class="logo_main">
+                    <h1>Aziz-APP</h1>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="search">
+                    <button class="btn">search</button>
+                </div>
+            </div>
+
+
+            <div class="mytable">
+
+                <% if (arr.length === 0) { %>
+                    <h4 style="text-align: center; margin-top: 4rem; font-size: 2rem; opacity: 0.7;">No data available</h4>
+
+                  <% } else { %>
+
+                    <table>
+
+                        <tr>
+                            <th>#</th>
+                            <th>Full Name</th>
+                            <th>Gender</th>
+                            <th>Country</th>
+                            <th>Age</th>
+                            <th>Last Updated</th>
+                            <th>Action</th>
+                        </tr>
+                        
+                        <% arr.forEach((item, index) => { %>
+                         
+                            <tr>
+                                <td><%= index+1  %></td>
+                                <td><%=  item.firstName %> <%= item.lastName %> </td>
+                                <td><%= item.gender %></td> 
+                                <td><%= item.country  %></td>
+                                <td><%= item.age %></td>
+                                <td><%= moment(item.updatedAt).fromNow()%></td>
+    
+    
+                                <td>
+                                    <a href="/user/<%= item._id %> "><i class="ri-eye-line"></i></a>
+                                    <a href="/edit/<%= item._id %>"><i class="ri-edit-2-fill"></i></a>
+                                    <form class="delete_item" action="/delete/<%= item._id %>?_method=DELETE" method="post" >
+                                        <a href=""><i class="ri-delete-bin-line"></i></a>
+                                    </form>
+                                </td>
+                            </tr>
+        
+                            
+                        <%  });  %>
+                        
+    
+                       
+    
+                        
+    
+    
+                    </table>
+                   <% } %>
+                
+            </div>
+
+           </div>
+                
+
+    </section>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

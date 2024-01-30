@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-add.css">
+</head>
+<body>
+    
+    <section class="section_container">
+           <div class="sidebar_container" id="sidebar">
+            <div class="sidebar_header" id="sidebar_container">
+                <div class="btn_close" id="btn_close"> 
+                    <i class="ri-close-circle-line"></i>
+                </div>
+                <div class="logo"><i class="ri-flashlight-fill"></i><span>SideBarApp</span></div>
+            </div>
+            <ul>
+                <li>
+                    <i class="ri-home-8-line"></i><a href="/">Home</a>
+                </li>
+
+                <li>
+                    <i class="ri-user-add-line"></i><a href="/add">Add Customers</a>
+                </li>
+            </ul>
+
+            <div class="profile">
+                <img src="/images/img_avatar.png" alt="">
+                <div class="name">Aziz ELmo</div>
+                <span><i class="ri-arrow-up-s-fill"></i></span>
+            </div>
+           </div>
+           <div class="main" id="main">
+
+            <div class="header_main">
+                <div class="logo_main">
+                    <h1>Aziz-APP</h1>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="search">
+                    <button class="btn">search</button>
+                </div>
+            </div>
+
+
+            <div class="mytable">
+
+            <form method="post" action="/add">
+                <div class="colm">
+                    <label for="">First Name :</label>
+                    <input type="text" placeholder="Your first name" name="firstName" >
+                </div>
+
+                <div class="colm">
+                    <label for="">Last Name :</label>
+                    <input type="text" placeholder="Your Last name" name="lastName" >
+                </div>
+
+                <div class="colm">
+                    <label for="">Email :</label>
+                    <input type="email" placeholder="Your email"  name="email">
+                </div>
+
+                <div class="colm">
+                    <label for="">Telephone :</label>
+                    <input type="number" placeholder="Your number" name="telephone">
+                </div>
+
+                <div class="colm">
+                    <label for="">Age :</label>
+                    <input type="number" placeholder="Your age" name="age" >
+                </div>
+
+                <div class="colm">
+                    <label for="">Country :</label>
+                    <select name="country" id="inputcounty" >
+                        <option selected hidden disabled> Choose here ...</option>
+                        <option value="Morocco">Morocco</option>
+                        <option value="Egypt">Egypt</option>
+                        </select>
+
+                </div>
+
+                <div class="colm">
+                    <label for="">Gender :</label>
+                    <select name="gender" id="inputgender">
+                        <option selected hidden disabled> Choose here ...</option>
+
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        </select>
+
+                </div>
+                <div class="colm"></div>
+
+                <button type="submit" class="btn-submit">Submit </button>
+            </form>
+
+            </div>
+
+           </div>
+                
+
+    </section>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

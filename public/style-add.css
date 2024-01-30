@@ -1,0 +1,58 @@
+form{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 1rem;
+}
+
+.colm{
+    padding: 10px 2rem;
+}
+
+label{
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.mytable input{
+    width: 100%;
+    padding: 1rem 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 15px;
+}
+
+.mytable input::placeholder{
+    color: gray;
+    opacity: 0.7;
+    font-size: em;
+}
+
+
+.mytable input:focus{
+    border: 2px solid #27ae60;
+    outline: none;
+}
+
+select{
+    width: 100%;
+    padding: 1rem 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 15px;
+}
+
+.btn-submit{
+    
+   padding: 1rem 2rem;
+   background-color: #0D6EFD;
+   color: white;
+   font-size: 1rem;
+   border-radius: 15px;
+   max-width: 150px;
+
+   margin-left: 2rem;
+   margin-top: 2rem;
+   cursor: pointer;
+}
+
+
+
